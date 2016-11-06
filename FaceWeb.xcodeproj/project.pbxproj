@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4300B0B25C756A83EB6C2B52 /* Pods_FaceWeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A4A11C849E6B42109069EB /* Pods_FaceWeb.framework */; };
 		571442921DCFA7290077FB2D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571442911DCFA7290077FB2D /* FeedVC.swift */; };
+		571442941DCFAF4F0077FB2D /* FancyView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571442931DCFAF4F0077FB2D /* FancyView2.swift */; };
+		571442961DCFD1AE0077FB2D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571442951DCFD1AE0077FB2D /* CircleView.swift */; };
 		5770A3A51DCF57BB00FD7921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3A41DCF57BB00FD7921 /* AppDelegate.swift */; };
 		5770A3A71DCF57BB00FD7921 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3A61DCF57BB00FD7921 /* SignInVC.swift */; };
 		5770A3AA1DCF57BB00FD7921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5770A3A81DCF57BB00FD7921 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		450591D4B8943B82A4891C5F /* Pods-FaceWeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceWeb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceWeb/Pods-FaceWeb.debug.xcconfig"; sourceTree = "<group>"; };
 		571442901DCF84E00077FB2D /* FaceWeb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FaceWeb.entitlements; sourceTree = "<group>"; };
 		571442911DCFA7290077FB2D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		571442931DCFAF4F0077FB2D /* FancyView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView2.swift; sourceTree = "<group>"; };
+		571442951DCFD1AE0077FB2D /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5770A3A11DCF57BB00FD7921 /* FaceWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5770A3A41DCF57BB00FD7921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5770A3A61DCF57BB00FD7921 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -113,9 +117,11 @@
 			isa = PBXGroup;
 			children = (
 				5770A3BE1DCF6FCD00FD7921 /* FancyView.swift */,
+				571442931DCFAF4F0077FB2D /* FancyView2.swift */,
 				5770A3C31DCF726400FD7921 /* RoundButton.swift */,
 				5770A3C51DCF740C00FD7921 /* FancyField.swift */,
 				5770A3C71DCF75AB00FD7921 /* FancyButton.swift */,
+				571442951DCFD1AE0077FB2D /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -277,10 +283,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				571442921DCFA7290077FB2D /* FeedVC.swift in Sources */,
+				571442941DCFAF4F0077FB2D /* FancyView2.swift in Sources */,
 				5770A3C41DCF726400FD7921 /* RoundButton.swift in Sources */,
 				5770A3C81DCF75AB00FD7921 /* FancyButton.swift in Sources */,
 				5770A3C21DCF705C00FD7921 /* Constants.swift in Sources */,
 				5770A3A71DCF57BB00FD7921 /* SignInVC.swift in Sources */,
+				571442961DCFD1AE0077FB2D /* CircleView.swift in Sources */,
 				5770A3A51DCF57BB00FD7921 /* AppDelegate.swift in Sources */,
 				5770A3BF1DCF6FCD00FD7921 /* FancyView.swift in Sources */,
 				5770A3C61DCF740C00FD7921 /* FancyField.swift in Sources */,
