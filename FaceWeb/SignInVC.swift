@@ -12,7 +12,12 @@ import FBSDKLoginKit
 import Firebase
 
 class SignInVC: UIViewController {
-
+    
+    
+    @IBOutlet weak var emailField: FancyField!
+    @IBOutlet weak var passField: FancyField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -46,6 +51,43 @@ class SignInVC: UIViewController {
         }
         
     }
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        
+        if let email = emailField.text, let pass = passField.text {
+            
+            
+            //Pass must be 6 char min
+            FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: { (user, error) in
+                
+                if error == nil {
+                    
+                    print("MF: Email user authenticated")
+                    
+                } else {
+                    
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
+                        
+                        if error != nil {
+                         
+                            print("MF: Unable to authenticate Firebase - email create")
+                            
+                        } else {
+                        
+                            print("MF: Email user authenticated - email create")
+                            
+                        }
+                        
+                    })
+                    
+                }
+                
+            })
+            
+        }
+        
+    }
+    
     
     func firebaseAuth(_ credential: FIRAuthCredential) {
         
