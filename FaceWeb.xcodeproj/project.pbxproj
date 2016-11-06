@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4300B0B25C756A83EB6C2B52 /* Pods_FaceWeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A4A11C849E6B42109069EB /* Pods_FaceWeb.framework */; };
 		5770A3A51DCF57BB00FD7921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3A41DCF57BB00FD7921 /* AppDelegate.swift */; };
-		5770A3A71DCF57BB00FD7921 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3A61DCF57BB00FD7921 /* ViewController.swift */; };
+		5770A3A71DCF57BB00FD7921 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3A61DCF57BB00FD7921 /* SignInVC.swift */; };
 		5770A3AA1DCF57BB00FD7921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5770A3A81DCF57BB00FD7921 /* Main.storyboard */; };
 		5770A3AD1DCF57BB00FD7921 /* FaceWeb.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3AB1DCF57BB00FD7921 /* FaceWeb.xcdatamodeld */; };
 		5770A3AF1DCF57BB00FD7921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5770A3AE1DCF57BB00FD7921 /* Assets.xcassets */; };
 		5770A3B21DCF57BB00FD7921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5770A3B01DCF57BB00FD7921 /* LaunchScreen.storyboard */; };
+		5770A3BA1DCF58E800FD7921 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5770A3B91DCF58E800FD7921 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		450591D4B8943B82A4891C5F /* Pods-FaceWeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceWeb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceWeb/Pods-FaceWeb.debug.xcconfig"; sourceTree = "<group>"; };
 		5770A3A11DCF57BB00FD7921 /* FaceWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5770A3A41DCF57BB00FD7921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5770A3A61DCF57BB00FD7921 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5770A3A61DCF57BB00FD7921 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		5770A3A91DCF57BB00FD7921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5770A3AC1DCF57BB00FD7921 /* FaceWeb.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FaceWeb.xcdatamodel; sourceTree = "<group>"; };
 		5770A3AE1DCF57BB00FD7921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5770A3B11DCF57BB00FD7921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5770A3B31DCF57BB00FD7921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5770A3B91DCF58E800FD7921 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A8A4A11C849E6B42109069EB /* Pods_FaceWeb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceWeb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C621BE6DB6DEF9EC9B2787BA /* Pods-FaceWeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceWeb.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceWeb/Pods-FaceWeb.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4300B0B25C756A83EB6C2B52 /* Pods_FaceWeb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BFC38F366B5BA41CE176118 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8A4A11C849E6B42109069EB /* Pods_FaceWeb.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5770A3981DCF57BB00FD7921 = {
 			isa = PBXGroup;
 			children = (
 				5770A3A31DCF57BB00FD7921 /* FaceWeb */,
 				5770A3A21DCF57BB00FD7921 /* Products */,
+				F3A20B0DFBD9075CEE7A917A /* Pods */,
+				4BFC38F366B5BA41CE176118 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,49 @@
 		5770A3A31DCF57BB00FD7921 /* FaceWeb */ = {
 			isa = PBXGroup;
 			children = (
+				5770A3BB1DCF5AB200FD7921 /* Model */,
+				5770A3BC1DCF5AB800FD7921 /* View */,
+				5770A3BD1DCF5ABD00FD7921 /* Controller */,
 				5770A3A41DCF57BB00FD7921 /* AppDelegate.swift */,
-				5770A3A61DCF57BB00FD7921 /* ViewController.swift */,
 				5770A3A81DCF57BB00FD7921 /* Main.storyboard */,
 				5770A3AE1DCF57BB00FD7921 /* Assets.xcassets */,
 				5770A3B01DCF57BB00FD7921 /* LaunchScreen.storyboard */,
 				5770A3B31DCF57BB00FD7921 /* Info.plist */,
 				5770A3AB1DCF57BB00FD7921 /* FaceWeb.xcdatamodeld */,
+				5770A3B91DCF58E800FD7921 /* GoogleService-Info.plist */,
 			);
 			path = FaceWeb;
+			sourceTree = "<group>";
+		};
+		5770A3BB1DCF5AB200FD7921 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5770A3BC1DCF5AB800FD7921 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5770A3BD1DCF5ABD00FD7921 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5770A3A61DCF57BB00FD7921 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F3A20B0DFBD9075CEE7A917A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				450591D4B8943B82A4891C5F /* Pods-FaceWeb.debug.xcconfig */,
+				C621BE6DB6DEF9EC9B2787BA /* Pods-FaceWeb.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5770A3B61DCF57BB00FD7921 /* Build configuration list for PBXNativeTarget "FaceWeb" */;
 			buildPhases = (
+				63816ACE0D17A53F0A914CDD /* [CP] Check Pods Manifest.lock */,
 				5770A39D1DCF57BB00FD7921 /* Sources */,
 				5770A39E1DCF57BB00FD7921 /* Frameworks */,
 				5770A39F1DCF57BB00FD7921 /* Resources */,
+				36AA3FEB95BE066A436C4AA7 /* [CP] Embed Pods Frameworks */,
+				A688A9080370F05E73097DB4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5770A3B21DCF57BB00FD7921 /* LaunchScreen.storyboard in Resources */,
+				5770A3BA1DCF58E800FD7921 /* GoogleService-Info.plist in Resources */,
 				5770A3AF1DCF57BB00FD7921 /* Assets.xcassets in Resources */,
 				5770A3AA1DCF57BB00FD7921 /* Main.storyboard in Resources */,
 			);
@@ -134,12 +189,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36AA3FEB95BE066A436C4AA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceWeb/Pods-FaceWeb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63816ACE0D17A53F0A914CDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A688A9080370F05E73097DB4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceWeb/Pods-FaceWeb-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5770A39D1DCF57BB00FD7921 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5770A3A71DCF57BB00FD7921 /* ViewController.swift in Sources */,
+				5770A3A71DCF57BB00FD7921 /* SignInVC.swift in Sources */,
 				5770A3A51DCF57BB00FD7921 /* AppDelegate.swift in Sources */,
 				5770A3AD1DCF57BB00FD7921 /* FaceWeb.xcdatamodeld in Sources */,
 			);
@@ -260,6 +363,7 @@
 		};
 		5770A3B71DCF57BB00FD7921 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 450591D4B8943B82A4891C5F /* Pods-FaceWeb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FaceWeb/Info.plist;
@@ -272,6 +376,7 @@
 		};
 		5770A3B81DCF57BB00FD7921 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C621BE6DB6DEF9EC9B2787BA /* Pods-FaceWeb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FaceWeb/Info.plist;
@@ -301,6 +406,7 @@
 				5770A3B81DCF57BB00FD7921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

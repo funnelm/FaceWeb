@@ -1,0 +1,6 @@
+framework module Pods_FaceWeb {
+  umbrella header "Pods-FaceWeb-umbrella.h"
+
+  export *
+  module * { export * }
+}
