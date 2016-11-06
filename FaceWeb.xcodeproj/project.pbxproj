@@ -15,6 +15,11 @@
 		5770A3AF1DCF57BB00FD7921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5770A3AE1DCF57BB00FD7921 /* Assets.xcassets */; };
 		5770A3B21DCF57BB00FD7921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5770A3B01DCF57BB00FD7921 /* LaunchScreen.storyboard */; };
 		5770A3BA1DCF58E800FD7921 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5770A3B91DCF58E800FD7921 /* GoogleService-Info.plist */; };
+		5770A3BF1DCF6FCD00FD7921 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3BE1DCF6FCD00FD7921 /* FancyView.swift */; };
+		5770A3C21DCF705C00FD7921 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3C11DCF705C00FD7921 /* Constants.swift */; };
+		5770A3C41DCF726400FD7921 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3C31DCF726400FD7921 /* RoundButton.swift */; };
+		5770A3C61DCF740C00FD7921 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3C51DCF740C00FD7921 /* FancyField.swift */; };
+		5770A3C81DCF75AB00FD7921 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3C71DCF75AB00FD7921 /* FancyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		5770A3B11DCF57BB00FD7921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5770A3B31DCF57BB00FD7921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5770A3B91DCF58E800FD7921 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5770A3BE1DCF6FCD00FD7921 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		5770A3C11DCF705C00FD7921 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5770A3C31DCF726400FD7921 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		5770A3C51DCF740C00FD7921 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		5770A3C71DCF75AB00FD7921 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		A8A4A11C849E6B42109069EB /* Pods_FaceWeb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceWeb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C621BE6DB6DEF9EC9B2787BA /* Pods-FaceWeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceWeb.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceWeb/Pods-FaceWeb.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +83,7 @@
 		5770A3A31DCF57BB00FD7921 /* FaceWeb */ = {
 			isa = PBXGroup;
 			children = (
+				5770A3C01DCF705100FD7921 /* Utils */,
 				5770A3BB1DCF5AB200FD7921 /* Model */,
 				5770A3BC1DCF5AB800FD7921 /* View */,
 				5770A3BD1DCF5ABD00FD7921 /* Controller */,
@@ -97,6 +108,10 @@
 		5770A3BC1DCF5AB800FD7921 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5770A3BE1DCF6FCD00FD7921 /* FancyView.swift */,
+				5770A3C31DCF726400FD7921 /* RoundButton.swift */,
+				5770A3C51DCF740C00FD7921 /* FancyField.swift */,
+				5770A3C71DCF75AB00FD7921 /* FancyButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -107,6 +122,14 @@
 				5770A3A61DCF57BB00FD7921 /* SignInVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		5770A3C01DCF705100FD7921 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5770A3C11DCF705C00FD7921 /* Constants.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		F3A20B0DFBD9075CEE7A917A /* Pods */ = {
@@ -242,8 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5770A3C41DCF726400FD7921 /* RoundButton.swift in Sources */,
+				5770A3C81DCF75AB00FD7921 /* FancyButton.swift in Sources */,
+				5770A3C21DCF705C00FD7921 /* Constants.swift in Sources */,
 				5770A3A71DCF57BB00FD7921 /* SignInVC.swift in Sources */,
 				5770A3A51DCF57BB00FD7921 /* AppDelegate.swift in Sources */,
+				5770A3BF1DCF6FCD00FD7921 /* FancyView.swift in Sources */,
+				5770A3C61DCF740C00FD7921 /* FancyField.swift in Sources */,
 				5770A3AD1DCF57BB00FD7921 /* FaceWeb.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
