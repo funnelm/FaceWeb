@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -17,10 +18,22 @@ class SignInVC: UIViewController {
     @IBOutlet weak var emailField: FancyField!
     @IBOutlet weak var passField: FancyField!
     
+   
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let hasKeychain = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            
+            performSegue(withIdentifier: "GoToFeed", sender: nil)
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,6 +77,8 @@ class SignInVC: UIViewController {
                     
                     print("MF: Email user authenticated")
                     
+                    
+                    
                 } else {
                     
                     FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
@@ -75,6 +90,7 @@ class SignInVC: UIViewController {
                         } else {
                         
                             print("MF: Email user authenticated - email create")
+                            self.completeSignIn(id: (user?.uid)!)
                             
                         }
                         
@@ -99,11 +115,33 @@ class SignInVC: UIViewController {
                 
             } else {
                 
-                print("MF: Authenticated with Facebook")
+                print("MF: Authenticated with Firebase")
+                
+                if let user = user {
+                    
+                    self.completeSignIn(id: user.uid)
+        
+                }
+                
                 
             }
             
         })
+        
+    }
+    
+    func completeSignIn(id: String) {
+        
+        if let saveSuccessful: Bool = KeychainWrapper.standard.set(id, forKey: KEY_UID) {
+            
+            print("MF: Saved to keychain")
+            performSegue(withIdentifier: "GoToFeed", sender: nil)
+    
+        } else {
+            
+            print("MF: uhoh")
+            
+        }
         
     }
     
