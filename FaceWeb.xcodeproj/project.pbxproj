@@ -25,6 +25,7 @@
 		5770A3C61DCF740C00FD7921 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3C51DCF740C00FD7921 /* FancyField.swift */; };
 		5770A3C81DCF75AB00FD7921 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770A3C71DCF75AB00FD7921 /* FancyButton.swift */; };
 		57D14CA91DD0E4E00011BFCC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D14CA81DD0E4E00011BFCC /* DataService.swift */; };
+		57D14CAB1DD10D580011BFCC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D14CAA1DD10D580011BFCC /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		5770A3C51DCF740C00FD7921 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		5770A3C71DCF75AB00FD7921 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		57D14CA81DD0E4E00011BFCC /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		57D14CAA1DD10D580011BFCC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A8A4A11C849E6B42109069EB /* Pods_FaceWeb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceWeb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C621BE6DB6DEF9EC9B2787BA /* Pods-FaceWeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceWeb.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceWeb/Pods-FaceWeb.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 		5770A3BB1DCF5AB200FD7921 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				57D14CAA1DD10D580011BFCC /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				571442941DCFAF4F0077FB2D /* FancyView2.swift in Sources */,
 				5770A3C41DCF726400FD7921 /* RoundButton.swift in Sources */,
 				5770A3C81DCF75AB00FD7921 /* FancyButton.swift in Sources */,
+				57D14CAB1DD10D580011BFCC /* Post.swift in Sources */,
 				5770A3C21DCF705C00FD7921 /* Constants.swift in Sources */,
 				5770A3A71DCF57BB00FD7921 /* SignInVC.swift in Sources */,
 				571442961DCFD1AE0077FB2D /* CircleView.swift in Sources */,
