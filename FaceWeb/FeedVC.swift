@@ -14,6 +14,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var tableView: UITableView!
+     @IBOutlet weak var signOutTapped: UIButton!
     
     
     override func viewDidLoad() {
@@ -21,6 +22,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
+            
+            print(snapshot.value)
+            
+        })
         
         // Do any additional setup after loading the view.
     }
@@ -39,9 +46,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     
-    @IBOutlet weak var signOutTapped: UIButton!
-    
-    
     @IBAction func SignOutPressed(_ sender: Any) {
   
         let removeSuccessful: Bool = KeychainWrapper.standard.remove(key: KEY_UID)
@@ -50,10 +54,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "SignOut", sender: nil)
         
     }
-    
-    
-    
-    
+   
     
     @IBAction func signOutTapped(_ sender: Any) {
         
@@ -67,14 +68,5 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func SignOutClick(_ sender: Any) {
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
