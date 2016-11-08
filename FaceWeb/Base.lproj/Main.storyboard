@@ -246,8 +246,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-TM-AQc" customClass="FancyView" customModule="FaceWeb" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="-156" width="343" height="364"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-TM-AQc" customClass="FancyView" customModule="FaceWeb" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="8" width="343" height="364"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-39-6Rz" customClass="CircleView" customModule="FaceWeb" customModuleProvider="target">
                                                             <rect key="frame" x="5" y="5" width="60" height="60"/>
@@ -336,6 +336,7 @@
                                         <connections>
                                             <outlet property="caption" destination="vFy-Lw-nxe" id="gTJ-AB-Alu"/>
                                             <outlet property="likes" destination="U7V-Bk-iSx" id="Lso-yS-b7L"/>
+                                            <outlet property="likesImg" destination="rwW-SL-uZJ" id="c2Y-y9-Lzs"/>
                                             <outlet property="postImage" destination="xjj-ZO-Gxm" id="blz-EC-VOy"/>
                                             <outlet property="profileImage" destination="1S9-39-6Rz" id="w1h-GS-4qQ"/>
                                             <outlet property="userName" destination="gLa-Uw-Thq" id="fiY-QU-mpe"/>

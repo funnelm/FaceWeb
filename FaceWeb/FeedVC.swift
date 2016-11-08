@@ -36,8 +36,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.allowsEditing = true
         
         
-        
         DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
+            
+        self.posts = []
             
             print(snapshot.value)
             
@@ -184,8 +185,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 return cell
             } else {
                 cell.configureCell(post: post, img: nil)
-                return cell
+                
             }
+            return cell
         
         } else {
             
