@@ -215,6 +215,9 @@
                                                     <constraint firstAttribute="height" constant="49" id="xIk-4M-gw0"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBTNTapped:" destination="nzx-ml-nLD" eventType="touchUpInside" id="glr-oL-Sph"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -243,8 +246,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-TM-AQc" customClass="FancyView" customModule="FaceWeb" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="8" width="343" height="364"/>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-TM-AQc" customClass="FancyView" customModule="FaceWeb" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="-156" width="343" height="364"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-39-6Rz" customClass="CircleView" customModule="FaceWeb" customModuleProvider="target">
                                                             <rect key="frame" x="5" y="5" width="60" height="60"/>
@@ -356,6 +359,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="captionField" destination="nKp-Qc-R9g" id="9ge-Dy-sln"/>
                         <outlet property="imageAdd" destination="13G-XE-xJb" id="m4U-ib-oiK"/>
                         <outlet property="tableView" destination="8TJ-6a-RbK" id="l8p-c8-pXb"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="SignOut" id="hBO-fL-2gI"/>

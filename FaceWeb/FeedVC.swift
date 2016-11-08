@@ -15,10 +15,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var signOutTapped: UIButton!
+    @IBOutlet weak var captionField: FancyField!
+    @IBOutlet weak var imageAdd: CircleView!
     
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
+    var imageSelected = false
     
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
@@ -59,7 +62,81 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var imageAdd: CircleView!
+    
+    
+    @IBAction func postBTNTapped(_ sender: Any) {
+        
+        //guard is opposite logic
+        guard let caption = captionField.text, caption != "" else {
+            
+            print("MF: no caption dumbass")
+            return
+            
+        }
+        
+        guard let image = imageAdd.image, imageSelected == true else {
+            
+            print("MF: no image dumbass")
+            return
+            
+        }
+        
+
+        if let imgData = UIImageJPEGRepresentation(image, 0.2) {
+            
+            let imgUID = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUID).put(imgData, metadata: metadata) { (metadata, error) in
+                
+                if error != nil {
+                    
+                    print("MF: Unable to upload image")
+                    
+                } else {
+                    
+                    print("Scucessful upload image")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    
+                    if let url = downloadURL {
+                    
+                        self.postToFirebase(imgURL: url)
+                        
+                    }
+                    
+                }
+                    
+            }
+
+        }
+    }
+    
+    
+    func postToFirebase(imgURL: String) {
+        
+        
+        let post: Dictionary<String, Any> = [
+            
+           "caption": captionField.text!,
+           "imageurl" : imgURL,
+           "likes" : 0
+            
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        
+        firebasePost.setValue(post)
+        
+        captionField.text = ""
+        imageSelected = false
+        imageAdd.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
+        
+    }
+    
+    
     
     @IBAction func addImageTapped(_ sender: Any) {
         
@@ -73,6 +150,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             
             imageAdd.image = image
+            imageSelected = true
             
         } else {
             
